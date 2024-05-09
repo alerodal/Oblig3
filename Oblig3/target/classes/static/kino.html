@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinobilletter</title>
+    <script src="kino.js"></script>
+    <style>
+        #antall{
+            width: 55px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Bestilling av kinobilletter</h1>
+            <form class="form">
+
+                <div class="form-group">
+                    <label for="film">Velg film:</label>
+                    <select name="film" class="form-control" id="film">
+                        <option value="velg">Velg film her</option>
+                        <option value="Home Alone 1">Home Alone 1</option>
+                        <option value="Home Alone 2">Home Alone 2</option>
+                        <option value="Home Alone 3">Home Alone 3</option>
+                    </select>
+                    <span id="filmError" style="color: red"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="antall">Antall</label>
+                    <input type="number" class="form-control" id="antall">
+                    <span id="antallError" style="color: red"></span>
+                </div><br/><br/>
+
+                <div class="form-group">
+                    <label for="fornavn">Fornavn</label>
+                    <input type="text" class="form-control" id="fornavn">
+                    <span id="fornavnError" style="color: red"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="etternavn">Etternavn</label>
+                    <input type="text" class="form-control" id="etternavn">
+                    <span id="etternavnError" style="color: red"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefonnr">Telefonnr</label>
+                    <input type="text" class="form-control" id="telefonnr">
+                    <span id="telefonError" style="color: red"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="epost">Epost</label>
+                    <input type="text" class="form-control" id="epost">
+                    <span id="epostError" style="color: red"></span>
+                </div>
+
+
+            </form>
+
+            <button class="btn btn-primary" onclick="kjopBillett()">Kjøp billett</button>
+
+        </div>
+
+        <div class="col-md-8">
+            <h2>Alle billetter</h2>
+            <div id="ut"></div>
+            <button class="btn btn-danger" onclick="slettBillett()">Slett alle billettene</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
